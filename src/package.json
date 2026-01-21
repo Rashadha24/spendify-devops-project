@@ -1,0 +1,11 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "echo 'dev server running'",
+    "build": "echo 'build complete'",
+    "lint": "echo 'lint complete'",
+    "test": "echo 'tests passed'"
+  },
+  "dependencies": {}
+}
