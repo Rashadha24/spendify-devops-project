@@ -5,28 +5,44 @@ on:
     branches: [ main, develop, feature/* ]
   pull_request:
     branches: [ main, develop ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Check Node version
+        run: node -v
 
-    - name: Run linter
-      run: npm run lint || echo "Lint skipped"
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('src/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Build project
-      run: npm run build || echo "Build skipped"
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./src
 
-    - name: Run tests
-      run: npm test || echo "Tests skipped"
+      - name: Run linter
+        run: npm run lint || echo "Lint skipped"
+        working-directory: ./src
+
+      - name: Build project
+        run: npm run build || echo "Build skipped"
+        working-directory: ./src
+
+      - name: Run tests
+        run: npm test || echo "Tests skipped"
+        working-directory: ./src
