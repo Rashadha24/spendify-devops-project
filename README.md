@@ -97,3 +97,4 @@ Deployment: Automatically triggers when code is merged from develop into main.
 🛑 Merge Conflict Resolution
 As required for full marks, we intentionally created a merge conflict by editing the same line in index.html across different branches. The DevOps Engineer resolved this manually by reviewing the changes and committing the final version to the develop branch.
 
+
