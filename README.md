@@ -12,8 +12,7 @@ Student 3: M.A.F.Farha - ITBNM-2313-0024- Role: Backend Developer
 Spendify is a web-based financial tracking application designed for the "Systems Administration & Maintenance" module. It allows users to track daily expenses, manage tasks, and view spending history. The project focuses on a professional DevOps lifecycle, implementing automated CI/CD pipelines and a strict Git branching strategy.
 
 🚀 Live Deployment
-🔗 Live URL: https://vercel.com/fathimas-projects-a0977f3a/spendify-devops-project/7A9b56mvd7rrsYH4MwN1kUtSfDQV
-
+🔗 Live URL:https://spendify-devops-project.vercel.app
 🛠 Technologies Used
 Frontend: HTML5, CSS3, JavaScript (ES6+)
 
@@ -96,5 +95,6 @@ Deployment: Automatically triggers when code is merged from develop into main.
 
 🛑 Merge Conflict Resolution
 As required for full marks, we intentionally created a merge conflict by editing the same line in index.html across different branches. The DevOps Engineer resolved this manually by reviewing the changes and committing the final version to the develop branch.
+
 
 
