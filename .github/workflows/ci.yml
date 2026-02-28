@@ -47,5 +47,8 @@ jobs:
         run: npm test || echo "Tests skipped"
         working-directory: ./src
 
+          
+      
+
       - name: Build Docker Image
         run: docker build -t spendify-app .
