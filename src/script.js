@@ -36,3 +36,15 @@ const StorageEngine = {
 
 // Make it globally accessible
 window.DB = StorageEngine;
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: true,        // VERY IMPORTANT
+    port: 5173,        // or your port
+    strictPort: true
+  }
+}) 
