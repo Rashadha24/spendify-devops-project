@@ -82,6 +82,9 @@ Deployment: Automatically triggers when code is merged from develop into main.
 
 🚀 Running with Docker (Frontend)
 Build: docker build -t spendify .
+
 Run: docker run -p 5173:5173 spendify
+
 Open Browser http://localhost:5173
+
 Stop Container : docker-compose down
