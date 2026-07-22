@@ -48,7 +48,7 @@ Developed core application features and source code.
 
 Created feature branches and managed Pull Requests with descriptions.
 
-[Student 3 Name] (Backend Developer)
+M.A.F.Farha (Backend Developer)
 
 Conducted code reviews for team members.
 
